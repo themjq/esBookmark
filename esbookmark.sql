@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 18/06/2024 22:01:09
+ Date: 22/06/2024 15:58:07
 */
 
 SET NAMES utf8mb4;
@@ -53,7 +53,7 @@ CREATE TABLE `bm_type`  (
   `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '书签类型表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '书签类型表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of bm_type
@@ -83,37 +83,37 @@ CREATE TABLE `bookmark`  (
   `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '书签表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 53 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '书签表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of bookmark
 -- ----------------------------
 INSERT INTO `bookmark` VALUES (1, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 1', 1, 0, '2023-09-15 10:00:00', '2023-09-15 10:00:00');
-INSERT INTO `bookmark` VALUES (2, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 2', 2, 1, '2023-09-15 11:00:00', '2023-09-15 11:00:00');
-INSERT INTO `bookmark` VALUES (3, 3, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 3', 3, 0, '2023-09-15 12:00:00', '2023-09-15 12:00:00');
-INSERT INTO `bookmark` VALUES (4, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 4', 4, 1, '2023-09-15 13:00:00', '2023-09-15 13:00:00');
+INSERT INTO `bookmark` VALUES (2, 2, '这是一个描述2', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 2', 2, 1, '2023-09-15 11:00:00', '2023-09-15 11:00:00');
+INSERT INTO `bookmark` VALUES (3, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 3', 3, 0, '2023-09-15 12:00:00', '2023-09-15 12:00:00');
+INSERT INTO `bookmark` VALUES (4, 1, '这是一个描述 4', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 4', 4, 1, '2023-09-15 13:00:00', '2023-09-15 13:00:00');
 INSERT INTO `bookmark` VALUES (5, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 5', 5, 0, '2023-09-15 14:00:00', '2023-09-15 14:00:00');
-INSERT INTO `bookmark` VALUES (6, 3, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 6', 1, 1, '2023-09-15 15:00:00', '2023-09-15 15:00:00');
+INSERT INTO `bookmark` VALUES (6, 1, '这是一个描述 6', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 6', 1, 1, '2023-09-15 15:00:00', '2023-09-15 15:00:00');
 INSERT INTO `bookmark` VALUES (7, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 7', 2, 0, '2023-09-15 16:00:00', '2023-09-15 16:00:00');
-INSERT INTO `bookmark` VALUES (8, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 8', 3, 1, '2023-09-15 17:00:00', '2023-09-15 17:00:00');
-INSERT INTO `bookmark` VALUES (9, 3, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 9', 4, 0, '2023-09-15 18:00:00', '2023-09-15 18:00:00');
-INSERT INTO `bookmark` VALUES (10, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 10', 5, 1, '2023-09-15 19:00:00', '2023-09-15 19:00:00');
+INSERT INTO `bookmark` VALUES (8, 2, '这是一个描述 8', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 8', 3, 1, '2023-09-15 17:00:00', '2023-09-15 17:00:00');
+INSERT INTO `bookmark` VALUES (9, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 9', 4, 0, '2023-09-15 18:00:00', '2023-09-15 18:00:00');
+INSERT INTO `bookmark` VALUES (10, 1, '这是一个描述 10', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 10', 5, 1, '2023-09-15 19:00:00', '2023-09-15 19:00:00');
 INSERT INTO `bookmark` VALUES (11, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 11', 2, 0, '2023-09-15 20:00:00', '2023-09-15 20:00:00');
-INSERT INTO `bookmark` VALUES (12, 3, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 12', 3, 1, '2023-09-15 21:00:00', '2023-09-15 21:00:00');
+INSERT INTO `bookmark` VALUES (12, 1, '这是一个描述 12', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 12', 3, 1, '2023-09-15 21:00:00', '2023-09-15 21:00:00');
 INSERT INTO `bookmark` VALUES (13, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 13', 4, 0, '2023-09-15 22:00:00', '2023-09-15 22:00:00');
-INSERT INTO `bookmark` VALUES (16, 3, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 16', 2, 1, '2023-09-16 01:00:00', '2023-09-16 01:00:00');
+INSERT INTO `bookmark` VALUES (16, 2, '这是一个描述 16', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 16', 2, 1, '2023-09-16 01:00:00', '2023-09-16 01:00:00');
 INSERT INTO `bookmark` VALUES (17, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 17', 3, 0, '2023-09-16 02:00:00', '2023-09-16 02:00:00');
-INSERT INTO `bookmark` VALUES (18, 2, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 18', 4, 1, '2023-09-16 03:00:00', '2023-09-16 03:00:00');
-INSERT INTO `bookmark` VALUES (19, 3, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 19', 5, 0, '2023-09-16 04:00:00', '2023-09-16 04:00:00');
-INSERT INTO `bookmark` VALUES (20, 10, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个', 1, 1, '2023-09-16 05:00:00', '2024-06-17 12:46:19');
-INSERT INTO `bookmark` VALUES (27, 10, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个', 1, 1, '2024-06-17 23:27:54', '2024-06-17 23:27:54');
+INSERT INTO `bookmark` VALUES (18, 2, '这是一个描述 18', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 18', 4, 1, '2023-09-16 03:00:00', '2023-09-16 03:00:00');
+INSERT INTO `bookmark` VALUES (19, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 19', 5, 0, '2023-09-16 04:00:00', '2023-09-16 04:00:00');
+INSERT INTO `bookmark` VALUES (20, 2, '这是一个描述 20', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个', 1, 1, '2023-09-16 05:00:00', '2024-06-17 12:46:19');
+INSERT INTO `bookmark` VALUES (27, 10, '这是一个描述 27', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个', 1, 1, '2024-06-17 23:27:54', '2024-06-17 23:27:54');
 INSERT INTO `bookmark` VALUES (28, 1, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 1', 1, 0, '2024-06-17 23:28:57', '2024-06-17 23:28:57');
 INSERT INTO `bookmark` VALUES (29, 26, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 1', 1, 0, '2024-06-17 23:31:26', '2024-06-17 23:31:26');
 INSERT INTO `bookmark` VALUES (30, 12, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个描述 1', 1, 0, '2024-06-18 08:27:14', '2024-06-18 08:27:14');
-INSERT INTO `bookmark` VALUES (31, 12, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个', 1, 0, '2024-06-18 08:49:45', '2024-06-18 09:14:06');
-INSERT INTO `bookmark` VALUES (32, 12, '这是一个描述 1', 'https://www.bilibili.com/', 'http://images:19205/2becb2aa-698f-48ba-9084-19e19cd81ee7.jpg', '这是一个', 1, 0, '2024-06-18 08:50:03', '2024-06-18 09:14:02');
-INSERT INTO `bookmark` VALUES (33, 12, '哔哩哔哩', 'https://www.bilibili.com/', 'http://images:19205/12f2657e-d09a-4c3e-8d39-7a4bd755c3f5.jpg', 'B站', 2, 1, '2024-06-18 09:04:56', '2024-06-18 09:14:15');
 INSERT INTO `bookmark` VALUES (34, 27, '哔哩哔哩', 'https://www.bilibili.com/', 'http://images:19205/12f2657e-d09a-4c3e-8d39-7a4bd755c3f5.jpg', 'B站', 2, 0, '2024-06-18 09:14:23', '2024-06-18 09:14:23');
+INSERT INTO `bookmark` VALUES (48, 3, '测试48', 'www.jqjkds.com', 'http://images:19205/f1b5a5eb-5c41-4b39-9176-587b63bee08e.jpg', 'ces', 4, 1, '2024-06-19 16:13:20', '2024-06-19 16:13:20');
+INSERT INTO `bookmark` VALUES (51, 12, '测试', 'www.jqjkds.com', 'http://images:19205/f1b5a5eb-5c41-4b39-9176-587b63bee08e.jpg', 'ces', 4, 0, '2024-06-21 15:50:24', '2024-06-21 15:50:24');
+INSERT INTO `bookmark` VALUES (52, 12, '测试', 'www.jqjkds.com', 'http://images:19205/f1b5a5eb-5c41-4b39-9176-587b63bee08e.jpg', 'ces', 4, 0, '2024-06-21 15:54:02', '2024-06-21 15:54:02');
 
 -- ----------------------------
 -- Table structure for user
@@ -132,13 +132,15 @@ CREATE TABLE `user`  (
   `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '普通用户表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '普通用户表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, 'user1', '123456', '用户1', '12345678911', 1, 0, '123456789012345678', 'http://images:19205/1d3b0abc-e25c-40c2-9d0e-05b50f3e46b3.jpg', '2021-01-01 00:00:00', '2024-06-17 11:43:59');
 INSERT INTO `user` VALUES (2, 'user5', '123456', '用户2', '12345678912', 1, 0, '123456789012345679', 'http://images:19205/1d3b0abc-e25c-40c2-9d0e-05b50f3e46b3.jpg', '2021-01-01 00:00:00', '2024-06-16 23:27:45');
-INSERT INTO `user` VALUES (12, 'mjq', '123456', '马家奇', NULL, 1, 0, '15615645645612156', 'http://images:19205/1d3b0abc-e25c-40c2-9d0e-05b50f3e46b3.jpg', '2024-06-16 23:44:36', '2024-06-16 23:44:36');
+INSERT INTO `user` VALUES (12, 'mjq', '123456', '马家奇', NULL, 1, 0, '15615645645612156', 'http://images:19205/f2c93efa-85f5-449f-a657-ddf330992a47.jpg', '2024-06-16 23:44:36', '2024-06-19 16:09:43');
+INSERT INTO `user` VALUES (33, 'mjq222', '123456', NULL, NULL, NULL, 0, NULL, NULL, '2024-06-19 16:05:27', '2024-06-19 16:05:27');
+INSERT INTO `user` VALUES (34, 'mjq1', '123456', NULL, NULL, NULL, 0, NULL, NULL, '2024-06-21 22:14:55', '2024-06-21 22:14:55');
 
 SET FOREIGN_KEY_CHECKS = 1;

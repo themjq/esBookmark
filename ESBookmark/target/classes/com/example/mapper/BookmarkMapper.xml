@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.BookmarkMapper">
+    <!--更新用户-->
+    <update id="update">
+        update bookmark
+        <set>
+            <if test="userId != null and userId != ''">
+                user_id = #{userId},
+            </if>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="url != null and url != ''">
+                url = #{url},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="typeId != null and typeId != ''">
+                type_id = #{typeId},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--批量删除用户 (1, 2, 3)-->
+    <delete id="delete">
+        delete
+        from bookmark
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--条件查询-->
+    <select id="list" resultType="com.example.pojo.BookMark">
+        select *
+        from bookmark
+        <where>
+            <if test="userId != null and userId != ''">
+                user_id =#{userId}
+            </if>
+          <if test="title != null and title != ''">
+             and title like concat('%', #{title}, '%')
+          </if>
+          <if test="status != null">
+              and status = #{status}
+          </if>
+            <if test="typeId != null">
+                and type_id = #{typeId}
+            </if>
+          <if test="begin != null and end != null">
+              and update_time between #{begin} and #{end}
+          </if>
+        </where>
+        order by update_time desc
+    </select>
+
+</mapper>

@@ -1,0 +1,3 @@
+npm config set prefix "D:\Work\node-v16.20.2\node_global"
+
+npm config set cache "D:\Work\node-v16.20.2\node_cache"
